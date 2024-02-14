@@ -95,8 +95,8 @@ public class WorkbenchScreen extends AbstractContainerScreen<WorkbenchContainer>
         }
 
         if (!weapons.isEmpty()) {
-            ItemStack icon = new ItemStack(ModItems.ASSAULT_RIFLE.get());
-            icon.getOrCreateTag().putInt("AmmoCount", ModItems.ASSAULT_RIFLE.get().getGun().getGeneral().getMaxAmmo());
+            ItemStack icon = new ItemStack(ModItems.RIFLE_ASSAULT.get());
+            icon.getOrCreateTag().putInt("AmmoCount", ModItems.RIFLE_ASSAULT.get().getGun().getGeneral().getMaxAmmo());
             this.tabs.add(new Tab(icon, "weapons", weapons));
         }
 
@@ -105,7 +105,7 @@ public class WorkbenchScreen extends AbstractContainerScreen<WorkbenchContainer>
         }
 
         if (!ammo.isEmpty()) {
-            this.tabs.add(new Tab(new ItemStack(ModItems.SHELL.get()), "ammo", ammo));
+            this.tabs.add(new Tab(new ItemStack(ModItems.G12.get()), "ammo", ammo));
         }
 
         if (!misc.isEmpty()) {
