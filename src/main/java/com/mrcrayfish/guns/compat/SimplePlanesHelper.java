@@ -55,18 +55,18 @@ public class SimplePlanesHelper {
 
     public static final ItemStack minigunDummy = ModItems.MINI_GUN.get().getDefaultInstance();
     public static final ItemStack shotgunDummy = ModItems.SHOTGUN.get().getDefaultInstance();
-    public static final ItemStack heavyRifleDummy = ModItems.RIFLE_BATTLE.get().getDefaultInstance();
+    public static final ItemStack heavyRifleDummy = ModItems.HEAVY_RIFLE.get().getDefaultInstance();
     public static final ItemStack grenadeLauncherDummy = ModItems.GRENADE_LAUNCHER.get().getDefaultInstance();
     public static final ItemStack bazookaDummy = ModItems.BAZOOKA.get().getDefaultInstance();
 
     public static void shooterBehaviour(Item ammoItem, ItemStackHandler itemStackHandler, Level level, Player player, Vec3 motion, double x, double y, double z) {
         if (ammoItem instanceof IAmmo) {
             ItemStack gunDummy;
-            if (ModItems.P9.get() == ammoItem) {
+            if (ModItems.BASIC_BULLET.get() == ammoItem) {
                 gunDummy = minigunDummy;
-            } else if (ModItems.G12.get() == ammoItem) {
+            } else if (ModItems.SHELL.get() == ammoItem) {
                 gunDummy = shotgunDummy;
-            } else if (ModItems.R762.get() == ammoItem) {
+            } else if (ModItems.ADVANCED_AMMO.get() == ammoItem) {
                 gunDummy = heavyRifleDummy;
             } else if (ModItems.GRENADE.get() == ammoItem) {
                 gunDummy = grenadeLauncherDummy;
